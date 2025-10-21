@@ -16,8 +16,7 @@ from typing import Dict, List, Any
 # --- RAG İÇİN İMPORTLAR ---
 from langchain_community.vectorstores import FAISS
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain_huggingface import HuggingFaceEmbeddings
-from langchain.prompts import PromptTemplate
+from langchain_community.embeddings import HuggingFaceEmbeddingsfrom langchain.prompts import PromptTemplate
 from langchain.chains.question_answering import load_qa_chain
 from langchain_google_genai import ChatGoogleGenerativeAI
 
