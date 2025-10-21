@@ -31,15 +31,15 @@ Ayrıca, Hugging Face üzerinde barındırılan özel embedding modeli sayesinde
 
 ## 🚀 Teknoloji Yığını
 
-*Arayüz (Frontend):Streamlit
+*Arayüz (Frontend):Streamlit*
 
-Yapay Zeka (AI):Google Gemini 2.5 Pro, LangChain
+*Yapay Zeka (AI):Google Gemini 2.5 Pro, LangChain*
 
-*RAG: FAISS (Vektör Veritabanı), HuggingFace Instruct Embeddings (`Fuurkan/chatbot-instructor-model`)
+*RAG: FAISS (Vektör Veritabanı), HuggingFace Instruct Embeddings (`Fuurkan/chatbot-instructor-model`)*
 
-Veri İşleme: PyPDF2 (PDF), BeautifulSoup (Web)
+*Veri İşleme: PyPDF2 (PDF), BeautifulSoup (Web)*
 
-** Görselleştirme: Matplotlib
+*Görselleştirme: Matplotlib*
 
 
 
@@ -47,21 +47,16 @@ Veri İşleme: PyPDF2 (PDF), BeautifulSoup (Web)
 
 Projedeki RAG (Retrieval-Augmented Generation) Chatbot, kullanıcının sorduğu soruları, `rag\_pdfs` klasöründeki belgelere dayanarak cevaplamak için tasarlanmıştır. Bu süreç, "indeksleme" ve "sorgulama" olmak üzere iki ana akışa ayrılır.
 
-
-
-### 1. Veri İşleme ve İndeksleme (Uygulama Başlangıcı)
+#### 1. Veri İşleme ve İndeksleme (Uygulama Başlangıcı)
 
 Bu akış, RAG sekmesi ilk açıldığında `initialize\_vector\_store` fonksiyonu ile tetiklenir ve `rag\_pdfs` klasöründeki verileri işler:
 
-1\.  \*\*Veri Okuma (Data Ingestion):\*\* `rag\_pdfs` klasöründeki tüm `.pdf` dosyaları `PyPDF2` kullanılarak taranır. Her bir PDF'in metin içeriği sayfa sayfa okunur ve tek bir büyük metin bloğu olarak birleştirilir.
+1. Veri Okuma (Data Ingestion): `rag\_pdfs` klasöründeki tüm `.pdf` dosyaları `PyPDF2` kullanılarak taranır. Her bir PDF'in metin içeriği sayfa sayfa okunur ve tek bir büyük metin bloğu olarak birleştirilir.
 
-2\.  \*\*Parçalama (Chunking):\*\* Bu büyük metin bloğu, `LangChain`'in `RecursiveCharacterTextSplitter`'ı ile daha küçük, yönetilebilir parçalara (chunk) ayrılır (Örn: 1000 karakterlik, 200 karakter örtüşmeli parçalar).
+2. Parçalama (Chunking): Bu büyük metin bloğu, `LangChain`'in `RecursiveCharacterTextSplitter`'ı ile daha küçük, yönetilebilir parçalara (chunk) ayrılır (Örn: 1000 karakterlik, 200 karakter örtüşmeli parçalar).
 
-3\.  \*\*Vektör Dönüşümü (Embedding):\*\*
-
-&nbsp;   \* Bu aşamada `HuggingFaceInstructEmbeddings(model\_name="Fuurkan/chatbot-instructor-model")` fonksiyonu çağrılır.
-
-&nbsp;   \* Eğer model (`Fuurkan/chatbot-instructor-model`) bilgisayarda mevcut değilse, `langchain` kütüphanesi modeli \*\*Hugging Face Hub'dan otomatik olarak indirir\*\*. (Bu ilk çalıştırmada internet bağlantısı gerektirir ve biraz zaman alabilir).
+3. Vektör Dönüşümü (Embedding): Bu aşamada `HuggingFaceInstructEmbeddings(model\_name="Fuurkan/chatbot-instructor-model")` fonksiyonu çağrılır.
+Eğer model (`Fuurkan/chatbot-instructor-model`) bilgisayarda mevcut değilse, `langchain` kütüphanesi modeli \*\*Hugging Face Hub'dan otomatik olarak indirir\*\*. (Bu ilk çalıştırmada internet bağlantısı gerektirir ve biraz zaman alabilir).
 
 &nbsp;   \* İndirilen model, her bir metin parçasını (chunk) \*\*sayısal bir vektöre\*\* dönüştürür.
 
