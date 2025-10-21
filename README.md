@@ -1,24 +1,24 @@
 # Akıllı Öğrenci Asistanı 🎓
 
-Kapsamlı bir RAG (Retrieval-Augmented Generation) altyapısına sahip, üretime hazır Yapay Zekâ Destekli Öğrenci Asistanı.
+*Kapsamlı bir RAG (Retrieval-Augmented Generation) altyapısına sahip, üretime hazır Yapay Zekâ Destekli Öğrenci Asistanı.
 Google Gemini 2.5 Pro modeliyle çalışarak; kişisel öğrenme analitiği, hedef takibi, PDF ve web içerik analizi ile öğrencilerin verimli şekilde çalışmasına yardımcı olur.
-Ayrıca, Hugging Face üzerinde barındırılan özel embedding modeli sayesinde kendi dokümanlarınız üzerinden akıllı yanıtlar üretir.
+Ayrıca, Hugging Face üzerinde barındırılan özel embedding modeli sayesinde kendi dokümanlarınız üzerinden akıllı yanıtlar üretir.*
 
 
 
 ## Temel Özellikler
 
-##### Akıllı Sohbet: Google Gemini 2.5 Pro altyapısını kullanan, geçmiş konuşmaları hatırlayabilen bir chatbot.
+###### Akıllı Sohbet: *Google Gemini 2.5 Pro altyapısını kullanan, geçmiş konuşmaları hatırlayabilen bir chatbot.*
 
-##### Öğrenme Analitiği: Çalışma sürelerini ve konuları kaydederek yapay zeka destekli kişisel çalışma önerileri sunar.
+###### Öğrenme Analitiği: *Çalışma sürelerini ve konuları kaydederek yapay zeka destekli kişisel çalışma önerileri sunar.*
 
-##### Görsel Pano: Matplotlib kullanarak son 7 günlük çalışma performansını gösteren interaktif grafikler.
+###### Görsel Pano: *Matplotlib kullanarak son 7 günlük çalışma performansını gösteren interaktif grafikler.*
 
-##### Hedef Takip Sistemi: Öğrencilerin hedefler belirlemesini, ilerlemelerini kaydetmesini ve tamamlanan hedefleri görmesini sağlar.
+###### Hedef Takip Sistemi: *Öğrencilerin hedefler belirlemesini, ilerlemelerini kaydetmesini ve tamamlanan hedefleri görmesini sağlar.*
 
-##### PDF İşleme: Yüklenen herhangi bir PDF dosyasını özetleyebilir veya dosya içeriği hakkında soruları yanıtlayabilir (Gemini multimodal yeteneği ile).
+###### PDF İşleme: *Yüklenen herhangi bir PDF dosyasını özetleyebilir veya dosya içeriği hakkında soruları yanıtlayabilir (Gemini multimodal yeteneği ile).*
 
-##### Web Analizi: #Verilen bir URL'deki web sitesi içeriğini analiz edebilir, özetleyebilir ve içerik hakkında soruları yanıtlayabilir.
+###### Web Analizi: *Verilen bir URL'deki web sitesi içeriğini analiz edebilir, özetleyebilir ve içerik hakkında soruları yanıtlayabilir.*
 
 ## RAG Chatbot (Yerel Bilgi Bankası):
 
@@ -34,15 +34,15 @@ Ayrıca, Hugging Face üzerinde barındırılan özel embedding modeli sayesinde
 
 ## 🚀 Teknoloji Yığını
 
-\* \*\*Arayüz (Frontend):\*\* Streamlit
+*Arayüz (Frontend):Streamlit
 
-\* \*\*Yapay Zeka (AI):\*\* Google Gemini 2.5 Pro, LangChain
+Yapay Zeka (AI):Google Gemini 2.5 Pro, LangChain
 
-\* \*\*RAG:\*\* FAISS (Vektör Veritabanı), HuggingFace Instruct Embeddings (`Fuurkan/chatbot-instructor-model`)
+*RAG: FAISS (Vektör Veritabanı), HuggingFace Instruct Embeddings (`Fuurkan/chatbot-instructor-model`)
 
-\* \*\*Veri İşleme:\*\* PyPDF2 (PDF), BeautifulSoup (Web)
+Veri İşleme: PyPDF2 (PDF), BeautifulSoup (Web)
 
-** Görselleştirme:\*\* Matplotlib
+** Görselleştirme: Matplotlib
 
 
 
@@ -94,15 +94,15 @@ Kullanıcı RAG sekmesinden bir soru sorduğunda, aşağıdaki akış gerçekle�
 
 \### 1. Gereksinimler
 
-\* Python 3.10+
+* Python 3.10+
 
-\* Google Gemini 2.5 Pro erişimi olan bir Google API Anahtarı.
+* Google Gemini 2.5 Pro erişimi olan bir Google API Anahtarı.
 
 \* \*\*Aktif İnternet Bağlantısı:\*\* RAG modülünün ilk çalıştırılmasında Hugging Face'den embedding modelini (yaklaşık 1.3 GB) otomatik olarak indirmek için gereklidir.
 
 
 
-\### 2. Projeyi Klonlama
+### 2. Projeyi Klonlama
 
 ```bash
 
@@ -112,7 +112,8 @@ cd akilli-ogrenci-asistani
 ```
 
 
-```3\. Gerekli Paketleri Yükleme
+### 3 Gerekli Paketleri Yükleme
+```
 
 Proje için gerekli tüm bağımlılıkları requirements.txt dosyasından yükleyin:
 
@@ -120,7 +121,7 @@ pip install -r requirements.txt
 ```
 
 
-4\. RAG Veri Hazırlığı (Önemli)
+4 RAG Veri Hazırlığı (Önemli)
 
 RAG Chatbot modülü, rag\_pdfs klasöründeki PDF dosyalarından beslenir. Projeyi klonladığınızda bu klasör ve içindeki örnek PDF'ler otomatik olarak gelecektir.
 
@@ -128,7 +129,8 @@ RAG Chatbot modülü, rag\_pdfs klasöründeki PDF dosyalarından beslenir. Proj
 
 
 
-```5\. Uygulamayı Başlatma
+5\. Uygulamayı Başlatma
+```
 
 streamlit run app.py
 ```
