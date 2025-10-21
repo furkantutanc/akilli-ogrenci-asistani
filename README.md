@@ -1,4 +1,4 @@
- Akıllı Öğrenci Asistanı 🎓
+# Akıllı Öğrenci Asistanı 🎓
 
 Kapsamlı bir RAG (Retrieval-Augmented Generation) altyapısına sahip, üretime hazır Yapay Zekâ Destekli Öğrenci Asistanı.
 Google Gemini 2.5 Pro modeliyle çalışarak; kişisel öğrenme analitiği, hedef takibi, PDF ve web içerik analizi ile öğrencilerin verimli şekilde çalışmasına yardımcı olur.
