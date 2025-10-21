@@ -13,7 +13,7 @@ import time
 import glob
 from typing import Dict, List, Any
 
-# --- RAG MODÜLÜ İÇİN YENİ İMPORTLAR ---
+# --- RAG İÇİN İMPORTLAR ---
 from langchain_community.vectorstores import FAISS
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.embeddings import HuggingFaceInstructEmbeddings
@@ -596,7 +596,7 @@ class WebAnaliz:
         except Exception as e:
             return f"Analiz hatası: {str(e)}"
 
-# ==================== YENİ: RAG CHATBOT MODÜLÜ ====================
+# ==================== RAG CHATBOT MODÜLÜ ====================
 class RAGIsleyici:
     def __init__(self):
         self.api_anahtari = None
@@ -611,8 +611,8 @@ class RAGIsleyici:
                 # Kullanıcıya indirme başladığını haber ver
                 st.info("Embedding modeli Hugging Face'den indiriliyor... (İlk çalıştırmada uzun sürebilir)")
                 
-                # --- DEĞİŞTİ ---
-                self.embeddings = HuggingFaceInstructEmbeddings(model_name="Fuurkan/chatbot-instructor-model")
+                
+                self.embeddings = HuggingFaceInstructEmbeddings(model_name="hkunlp/instructor-large")
                 
                 st.success("Embedding modeli başarıyla yüklendi.")
             except Exception as e:
