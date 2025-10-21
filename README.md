@@ -22,13 +22,13 @@ Ayrıca, Hugging Face üzerinde barındırılan özel embedding modeli sayesinde
 
 ## RAG Chatbot (Yerel Bilgi Bankası):
 
-###### Belirli bir klasördeki (`rag\_pdfs`) PDF'leri otomatik olarak indeksler.
+Belirli bir klasördeki (`rag\_pdfs`) PDF'leri otomatik olarak indeksler.
 
- Bilgiyi `FAISS` vektör veritabanında saklar.
+Bilgiyi `FAISS` vektör veritabanında saklar.
 
 `LangChain` ve `HuggingFace` (Fuurkan/chatbot-instructor-model) embedding modeli kullanarak bu belgelere özel soruları yanıtlar.
 
-** Kişiselleştirilmiş Arayüz:\*\* Akıcı animasyonlara sahip özel bir giriş (login) ve çıkış (logout) ekranı.
+###### Kişiselleştirilmiş Arayüz:Akıcı animasyonlara sahip özel bir giriş (login) ve çıkış (logout) ekranı.
 
 
 
