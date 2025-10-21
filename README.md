@@ -20,7 +20,7 @@ Ayrıca, Hugging Face üzerinde barındırılan özel embedding modeli sayesinde
 
 ###### Web Analizi: *Verilen bir URL'deki web sitesi içeriğini analiz edebilir, özetleyebilir ve içerik hakkında soruları yanıtlayabilir.*
 
-## RAG Chatbot (Yerel Bilgi Bankası):
+### RAG Chatbot (Yerel Bilgi Bankası):
 
 &nbsp;   \* Belirli bir klasördeki (`rag\_pdfs`) PDF'leri otomatik olarak indeksler.
 
