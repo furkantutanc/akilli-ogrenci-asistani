@@ -8,7 +8,7 @@ Ayrıca, Hugging Face üzerinde barındırılan özel embedding modeli sayesinde
 
 ## Temel Özellikler
 
-### Akıllı Sohbet: Google Gemini 2.5 Pro altyapısını kullanan, geçmiş konuşmaları hatırlayabilen bir chatbot.
+##### Akıllı Sohbet: Google Gemini 2.5 Pro altyapısını kullanan, geçmiş konuşmaları hatırlayabilen bir chatbot.
 
 ### Öğrenme Analitiği: Çalışma sürelerini ve konuları kaydederek yapay zeka destekli kişisel çalışma önerileri sunar.
 
