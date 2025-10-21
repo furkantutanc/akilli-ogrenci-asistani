@@ -5,6 +5,9 @@ Google Gemini 2.5 Pro modeliyle çalışarak; kişisel öğrenme analitiği, hed
 Ayrıca, Hugging Face üzerinde barındırılan özel embedding modeli sayesinde kendi dokümanlarınız üzerinden akıllı yanıtlar üretir.**
 
 
+#### Not: Lütfen uygulamayı başlattığınızda Hugging Face'den embedding modeli indirilirken başka bir işlem yapmayın. (Tavsiye edilir.)
+
+
 
 ## Temel Özellikler
 
@@ -98,16 +101,14 @@ Kullanıcı RAG sekmesinden bir soru sorduğunda, aşağıdaki akış gerçekle�
 ```bash
 
 git clone https://github.com/furkantutanc/akilli-ogrenci-asistani
-
 cd akilli-ogrenci-asistani
 ```
 
 
 ### 3 Gerekli Paketleri Yükleme
-```
 
 Proje için gerekli tüm bağımlılıkları requirements.txt dosyasından yükleyin:
-
+```
 pip install -r requirements.txt
 ```
 
@@ -125,8 +126,6 @@ pip install -r requirements.txt
 
 streamlit run app.py
 ```
-
-
 
 
 **Uygulama tarayıcınızda (http://localhost:8501) açılacaktır. Giriş ekranında sizden Adınız ve Google API Anahtarınızı girmeniz istenecektir.**
