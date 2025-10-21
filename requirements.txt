@@ -1,0 +1,13 @@
+streamlit
+langchain
+langchain-google-genai
+langchain-huggingface
+langchain-community
+faiss-cpu
+pypdf
+sentence-transformers
+google-generativeai
+requests
+beautifulsoup4
+matplotlib
+InstructorEmbedding
