@@ -1,30 +1,26 @@
-\# Akıllı Öğrenci Asistanı 🎓
-
-
+ Akıllı Öğrenci Asistanı 🎓
 
 Kapsamlı bir RAG (Retrieval-Augmented Generation) altyapısına sahip, üretime hazır Yapay Zekâ Destekli Öğrenci Asistanı.
-
 Google Gemini 2.5 Pro modeliyle çalışarak; kişisel öğrenme analitiği, hedef takibi, PDF ve web içerik analizi ile öğrencilerin verimli şekilde çalışmasına yardımcı olur.
-
 Ayrıca, Hugging Face üzerinde barındırılan özel embedding modeli sayesinde kendi dokümanlarınız üzerinden akıllı yanıtlar üretir.
 
 
 
-\## ✨ Temel Özellikler
+✨ Temel Özellikler
 
-\* \*\*🤖 Akıllı Sohbet:\*\* Google Gemini 2.5 Pro altyapısını kullanan, geçmiş konuşmaları hatırlayabilen bir chatbot.
+🤖 Akıllı Sohbet:\*\* Google Gemini 2.5 Pro altyapısını kullanan, geçmiş konuşmaları hatırlayabilen bir chatbot.
 
-\* \*\*📊 Öğrenme Analitiği:\*\* Çalışma sürelerini ve konuları kaydederek yapay zeka destekli kişisel çalışma önerileri sunar.
+📊 Öğrenme Analitiği:\*\* Çalışma sürelerini ve konuları kaydederek yapay zeka destekli kişisel çalışma önerileri sunar.
 
-\* \*\*📈 Görsel Pano:\*\* Matplotlib kullanarak son 7 günlük çalışma performansını gösteren interaktif grafikler.
+📈 Görsel Pano:\*\* Matplotlib kullanarak son 7 günlük çalışma performansını gösteren interaktif grafikler.
 
-\* \*\*🎯 Hedef Takip Sistemi:\*\* Öğrencilerin hedefler belirlemesini, ilerlemelerini kaydetmesini ve tamamlanan hedefleri görmesini sağlar.
+🎯 Hedef Takip Sistemi:\*\* Öğrencilerin hedefler belirlemesini, ilerlemelerini kaydetmesini ve tamamlanan hedefleri görmesini sağlar.
 
-\* \*\*📄 PDF İşleme:\*\* Yüklenen herhangi bir PDF dosyasını özetleyebilir veya dosya içeriği hakkında soruları yanıtlayabilir (Gemini multimodal yeteneği ile).
+📄 PDF İşleme:\*\* Yüklenen herhangi bir PDF dosyasını özetleyebilir veya dosya içeriği hakkında soruları yanıtlayabilir (Gemini multimodal yeteneği ile).
 
-\* \*\*🌐 Web Analizi:\*\* Verilen bir URL'deki web sitesi içeriğini analiz edebilir, özetleyebilir ve içerik hakkında soruları yanıtlayabilir.
+🌐 Web Analizi:\*\* Verilen bir URL'deki web sitesi içeriğini analiz edebilir, özetleyebilir ve içerik hakkında soruları yanıtlayabilir.
 
-\* \*\*📚 RAG Chatbot (Yerel Bilgi Bankası):\*\*
+📚 RAG Chatbot (Yerel Bilgi Bankası):\*\*
 
 &nbsp;   \* Belirli bir klasördeki (`rag\_pdfs`) PDF'leri otomatik olarak indeksler.
 
