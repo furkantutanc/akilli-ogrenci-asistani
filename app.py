@@ -16,7 +16,7 @@ from typing import Dict, List, Any
 # --- RAG İÇİN İMPORTLAR ---
 from langchain_community.vectorstores import FAISS
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain_community.embeddings import HuggingFaceInstructEmbeddings
+from langchain_huggingface import HuggingFaceEmbeddings
 from langchain.prompts import PromptTemplate
 from langchain.chains.question_answering import load_qa_chain
 from langchain_google_genai import ChatGoogleGenerativeAI
@@ -612,7 +612,7 @@ class RAGIsleyici:
                 st.info("Embedding modeli Hugging Face'den indiriliyor... (İlk çalıştırmada uzun sürebilir)")
                 
                 
-                self.embeddings = HuggingFaceInstructEmbeddings(model_name="hkunlp/instructor-large")
+                self.embeddings = HuggingFaceEmbeddings(model_name="hkunlp/instructor-large")
                 
                 st.success("Embedding modeli başarıyla yüklendi.")
             except Exception as e:
