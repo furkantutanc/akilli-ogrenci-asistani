@@ -86,7 +86,9 @@ Kullanıcı RAG sekmesinden bir soru sorduğunda, aşağıdaki akış gerçekle�
 ### 1. Gereksinimler
 
  *Python 3.10+*
+ 
 *Google Gemini 2.5 Pro erişimi olan bir Google API Anahtarı.*
+
 *Aktif İnternet Bağlantısı: RAG modülünün ilk çalıştırılmasında Hugging Face'den embedding modelini (yaklaşık 1.3 GB) otomatik olarak indirmek için gereklidir.*
 
 
