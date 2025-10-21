@@ -32,7 +32,7 @@ Ayrıca, Hugging Face üzerinde barındırılan özel embedding modeli sayesinde
 
 
 
-\## 🚀 Teknoloji Yığını
+## 🚀 Teknoloji Yığını
 
 \* \*\*Arayüz (Frontend):\*\* Streamlit
 
@@ -52,7 +52,7 @@ Projedeki RAG (Retrieval-Augmented Generation) Chatbot, kullanıcının sorduğu
 
 
 
-\### 1. Veri İşleme ve İndeksleme (Uygulama Başlangıcı)
+### 1. Veri İşleme ve İndeksleme (Uygulama Başlangıcı)
 
 Bu akış, RAG sekmesi ilk açıldığında `initialize\_vector\_store` fonksiyonu ile tetiklenir ve `rag\_pdfs` klasöründeki verileri işler:
 
