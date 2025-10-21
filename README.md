@@ -8,17 +8,17 @@ Ayrıca, Hugging Face üzerinde barındırılan özel embedding modeli sayesinde
 
 ## Temel Özellikler
 
- Akıllı Sohbet: Google Gemini 2.5 Pro altyapısını kullanan, geçmiş konuşmaları hatırlayabilen bir chatbot.
+### Akıllı Sohbet: Google Gemini 2.5 Pro altyapısını kullanan, geçmiş konuşmaları hatırlayabilen bir chatbot.
 
-Öğrenme Analitiği: Çalışma sürelerini ve konuları kaydederek yapay zeka destekli kişisel çalışma önerileri sunar.
+### Öğrenme Analitiği: Çalışma sürelerini ve konuları kaydederek yapay zeka destekli kişisel çalışma önerileri sunar.
 
-Görsel Pano: Matplotlib kullanarak son 7 günlük çalışma performansını gösteren interaktif grafikler.
+### Görsel Pano: Matplotlib kullanarak son 7 günlük çalışma performansını gösteren interaktif grafikler.
 
-Hedef Takip Sistemi: Öğrencilerin hedefler belirlemesini, ilerlemelerini kaydetmesini ve tamamlanan hedefleri görmesini sağlar.
+### Hedef Takip Sistemi: Öğrencilerin hedefler belirlemesini, ilerlemelerini kaydetmesini ve tamamlanan hedefleri görmesini sağlar.
 
-PDF İşleme: Yüklenen herhangi bir PDF dosyasını özetleyebilir veya dosya içeriği hakkında soruları yanıtlayabilir (Gemini multimodal yeteneği ile).
+### PDF İşleme: Yüklenen herhangi bir PDF dosyasını özetleyebilir veya dosya içeriği hakkında soruları yanıtlayabilir (Gemini multimodal yeteneği ile).
 
-Web Analizi: #Verilen bir URL'deki web sitesi içeriğini analiz edebilir, özetleyebilir ve içerik hakkında soruları yanıtlayabilir.
+### Web Analizi: #Verilen bir URL'deki web sitesi içeriğini analiz edebilir, özetleyebilir ve içerik hakkında soruları yanıtlayabilir.
 
 RAG Chatbot (Yerel Bilgi Bankası):
 
@@ -28,7 +28,7 @@ RAG Chatbot (Yerel Bilgi Bankası):
 
 &nbsp;   \* `LangChain` ve `HuggingFace` (Fuurkan/chatbot-instructor-model) embedding modeli kullanarak bu belgelere özel soruları yanıtlar.
 
-\* \*\*🎨 Kişiselleştirilmiş Arayüz:\*\* Akıcı animasyonlara sahip özel bir giriş (login) ve çıkış (logout) ekranı.
+** Kişiselleştirilmiş Arayüz:\*\* Akıcı animasyonlara sahip özel bir giriş (login) ve çıkış (logout) ekranı.
 
 
 
@@ -42,11 +42,11 @@ RAG Chatbot (Yerel Bilgi Bankası):
 
 \* \*\*Veri İşleme:\*\* PyPDF2 (PDF), BeautifulSoup (Web)
 
-\* \*\*Görselleştirme:\*\* Matplotlib
+** Görselleştirme:\*\* Matplotlib
 
 
 
-\## 🤖 RAG Modülü: Detaylı Çalışma Prensibi ---- Mentor İsteği  
+## 🤖 RAG Modülü: Detaylı Çalışma Prensibi ---- Mentor İsteği  
 
 Projedeki RAG (Retrieval-Augmented Generation) Chatbot, kullanıcının sorduğu soruları, `rag\_pdfs` klasöründeki belgelere dayanarak cevaplamak için tasarlanmıştır. Bu süreç, "indeksleme" ve "sorgulama" olmak üzere iki ana akışa ayrılır.
 
