@@ -10,5 +10,4 @@ google-generativeai
 requests
 beautifulsoup4
 matplotlib
-InstructorEmbedding
 PyPDF2
