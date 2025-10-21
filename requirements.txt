@@ -1,7 +1,7 @@
 streamlit
 langchain
 langchain-google-genai
-langchain-huggingface
+langchain-text-splitters
 langchain-community
 faiss-cpu
 pypdf
