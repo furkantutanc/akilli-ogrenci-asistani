@@ -123,10 +123,11 @@ pip install -r requirements.txt
 
 5\. Uygulamayı Başlatma
 ```
-
 streamlit run app.py
 ```
 
 
 **Uygulama tarayıcınızda (http://localhost:8501) açılacaktır. Giriş ekranında sizden Adınız ve Google API Anahtarınızı girmeniz istenecektir.**
+
+### Deploy ettiğiniz web arayüzünün linki: https://akilli-ogrenci-asistani-ft.streamlit.app/
 
