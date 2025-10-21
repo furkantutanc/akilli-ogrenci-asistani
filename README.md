@@ -21,12 +21,9 @@ Ayrıca, Hugging Face üzerinde barındırılan özel embedding modeli sayesinde
 ###### Web Analizi: *Verilen bir URL'deki web sitesi içeriğini analiz edebilir, özetleyebilir ve içerik hakkında soruları yanıtlayabilir.*
 
 ###### RAG Chatbot (Yerel Bilgi Bankası):
-
-Belirli bir klasördeki (`rag\_pdfs`) PDF'leri otomatik olarak indeksler.
-
-Bilgiyi `FAISS` vektör veritabanında saklar.
-
-`LangChain` ve `HuggingFace` (Fuurkan/chatbot-instructor-model) embedding modeli kullanarak bu belgelere özel soruları yanıtlar.
+###### Belirli bir klasördeki (`rag\_pdfs`) PDF'leri otomatik olarak indeksler.
+###### Bilgiyi `FAISS` vektör veritabanında saklar.
+###### `LangChain` ve `HuggingFace` (Fuurkan/chatbot-instructor-model) embedding modeli kullanarak bu belgelere özel soruları yanıtlar.
 
 ###### Kişiselleştirilmiş Arayüz:Akıcı animasyonlara sahip özel bir giriş (login) ve çıkış (logout) ekranı.
 
