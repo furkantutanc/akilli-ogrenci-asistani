@@ -109,19 +109,15 @@ Kullanıcı RAG sekmesinden bir soru sorduğunda, aşağıdaki akış gerçekle�
 git clone https://github.com/furkantutanc/akilli-ogrenci-asistani
 
 cd akilli-ogrenci-asistani
+```
 
 
-
-
-
-3\. Gerekli Paketleri Yükleme
+```3\. Gerekli Paketleri Yükleme
 
 Proje için gerekli tüm bağımlılıkları requirements.txt dosyasından yükleyin:
 
 pip install -r requirements.txt
-
-
-
+```
 
 
 4\. RAG Veri Hazırlığı (Önemli)
@@ -132,9 +128,10 @@ RAG Chatbot modülü, rag\_pdfs klasöründeki PDF dosyalarından beslenir. Proj
 
 
 
-5\. Uygulamayı Başlatma
+```5\. Uygulamayı Başlatma
 
 streamlit run app.py
+```
 
 
 
