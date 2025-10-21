@@ -5,7 +5,7 @@ Google Gemini 2.5 Pro modeliyle çalışarak; kişisel öğrenme analitiği, hed
 Ayrıca, Hugging Face üzerinde barındırılan özel embedding modeli sayesinde kendi dokümanlarınız üzerinden akıllı yanıtlar üretir.**
 
 
-#### Not: Lütfen uygulamayı başlattığınızda Hugging Face'den embedding modeli indirilirken başka bir işlem yapmayın. (Tavsiye edilir.)
+#### Not: Lütfen uygulamayı başlattığınızda Hugging Face'den embedding modeli indirilirken ve pdf işlenirken başka bir işlem yapmayın. (Tavsiye edilir.)
 
 
 
