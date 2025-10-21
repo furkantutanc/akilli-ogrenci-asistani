@@ -612,7 +612,10 @@ class RAGIsleyici:
                 st.info("Embedding modeli Hugging Face'den indiriliyor... (İlk çalıştırmada uzun sürebilir)")
                 
                 
-                self.embeddings = HuggingFaceEmbeddings(model_name="hkunlp/instructor-base")
+                self.embeddings = HuggingFaceEmbeddings(
+    model_name="hkunlp/instructor-base",
+    model_kwargs={'device': 'cpu'}
+)
                 
                 st.success("Embedding modeli başarıyla yüklendi.")
             except Exception as e:
