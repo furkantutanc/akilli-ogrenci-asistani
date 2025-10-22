@@ -699,39 +699,21 @@ class RAGIsleyici:
 
     def _get_conversational_chain(self):
         """Soru-cevap zincirini (QA Chain) oluşturur."""
+        prompt_template = """
+        Sana verilen bağlamı kullanarak soruyu olabildiğince detaylı cevapla.
+        Eğer cevap bağlamda yoksa, kendi bilgine göre hızlı ve kısaca cevapla.
 
-        # 1. MAP (HARİTALAMA) PROMPT'U
-        # (Her bir belge parçasına ayrı ayrı uygulanır)
-        map_prompt_template = """
-        Aşağıdaki metin parçasını analiz et ve şu soruya cevap verebilecek kısımları özetle:
-        SORU: {question}
-        METİN: {context}
+        Bağlam:\n {context}?\n
+        Soru: \n{question}\n
 
-       Sadece soruyla ilgili TÜRKÇE özeti ver:
+        Cevap:
         """
-       map_prompt = PromptTemplate(template=map_prompt_template, input_variables=["context", "question"])
-
-        # 2. REDUCE (BİRLEŞTİRME) PROMPT'U
-        # (Tüm özetler toplanır ve bu prompt ile tek bir cevap oluşturulur)
-        combine_prompt_template = """
-        Aşağıdaki metin özetlerini kullanarak şu soruyu kapsamlı bir şekilde TÜRKÇE yanıtla:
-        SORU: {question}
-        ÖZETLER: {context}
-    
-        Kapsamlı Cevap:
-        """
-        combine_prompt = PromptTemplate(template=combine_prompt_template, input_variables=["context", "question"])
-
-        # MODEL TANIMLAMASI
         model = ChatGoogleGenerativeAI(model="gemini-2.5-pro", temperature=0.3, google_api_key=self.api_anahtari)
-
-        # ZİNCİRİ DOĞRU PARAMETRELERLE YÜKLE
-        chain = load_qa_chain(
-            model, 
-            chain_type="map_reduce", 
-            question_prompt=map_prompt,     # Bu, "map" adımı için kullanılır
-            combine_prompt=combine_prompt   # Bu, "reduce" adımı için kullanılır
-        )
+        prompt = PromptTemplate(template=prompt_template, input_variables=["context", "question"])
+        
+        # Orijinal "stuff" metoduna geri döndük (ResourceExhausted hatasını önlemek için k=2 kullanacağız)
+        chain = load_qa_chain(model, chain_type="stuff", prompt=prompt)
+        
         return chain
 
     def user_input(self, user_question):
@@ -742,7 +724,7 @@ class RAGIsleyici:
 
         vector_store = st.session_state.rag_vector_store
         
-        # Kullanıcının sorusuna en benzer doküman parçalarını veritabanından bulmak
+        # ResourceExhausted hatasını çözmek için k=2 olarak ayarladık
         docs = vector_store.similarity_search(user_question, k=2)
         
         chain = self._get_conversational_chain()
