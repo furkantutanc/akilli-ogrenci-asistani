@@ -1,17 +1,17 @@
 # Akıllı Öğrenci Asistanı 🎓
 
 **Kapsamlı bir RAG (Retrieval-Augmented Generation) altyapısına sahip, üretime hazır Yapay Zekâ Destekli Öğrenci Asistanı.
-Google Gemini 2.5 Pro modeliyle çalışarak; kişisel öğrenme analitiği, hedef takibi, PDF ve web içerik analizi ile öğrencilerin verimli şekilde çalışmasına yardımcı olur.
+Google Gemini 2.5 Flash modeliyle çalışarak; kişisel öğrenme analitiği, hedef takibi, PDF ve web içerik analizi ile öğrencilerin verimli şekilde çalışmasına yardımcı olur.
 Ayrıca, Hugging Face üzerinde barındırılan özel embedding modeli sayesinde kendi dokümanlarınız üzerinden akıllı yanıtlar üretir.**
 
 
 #### Not: Lütfen uygulamayı başlattığınızda Hugging Face'den embedding modeli indirilirken ve pdf işlenirken başka bir işlem yapmayın. (Tavsiye edilir.)
-
+ **Rag Chatbot menüsünde uygun soruları sormak için rag_pdfs klasöründeki PDF dosyasını inceleyiniz.**
 
 
 ## Temel Özellikler
 
-###### Akıllı Sohbet: *Google Gemini 2.5 Pro altyapısını kullanan, geçmiş konuşmaları hatırlayabilen bir chatbot.*
+###### Akıllı Sohbet: *Google Gemini 2.5 Flash altyapısını kullanan, geçmiş konuşmaları hatırlayabilen bir chatbot.*
 
 ###### Öğrenme Analitiği: *Çalışma sürelerini ve konuları kaydederek yapay zeka destekli kişisel çalışma önerileri sunar.*
 
@@ -36,7 +36,7 @@ Ayrıca, Hugging Face üzerinde barındırılan özel embedding modeli sayesinde
 
 *Arayüz (Frontend):Streamlit*
 
-*Yapay Zeka (AI):Google Gemini 2.5 Pro, LangChain*
+*Yapay Zeka (AI):Google Gemini 2.5 Flash, LangChain*
 
 *RAG: FAISS (Vektör Veritabanı), HuggingFace Instruct Embeddings (`Fuurkan/chatbot-instructor-model`)*
 
@@ -90,7 +90,7 @@ Kullanıcı RAG sekmesinden bir soru sorduğunda, aşağıdaki akış gerçekle�
 
  *Python 3.10+*
  
-*Google Gemini 2.5 Pro erişimi olan bir Google API Anahtarı.*
+*Google Gemini 2.5 Flash erişimi olan bir Google API Anahtarı.*
 
 *Aktif İnternet Bağlantısı: RAG modülünün ilk çalıştırılmasında Hugging Face'den embedding modelini (yaklaşık 1.3 GB) otomatik olarak indirmek için gereklidir.*
 
@@ -127,7 +127,7 @@ streamlit run app.py
 ```
 
 
-**Uygulama tarayıcınızda (http://localhost:8501) açılacaktır. Giriş ekranında sizden Adınız ve Google API Anahtarınızı girmeniz istenecektir.**
+Giriş ekranında sizden Adınız ve Google API Anahtarınızı girmeniz istenecektir.**
 
-### Deploy ettiğiniz web arayüzünün linki: https://akilli-ogrenci-asistani-ft.streamlit.app/
+### Deploy edilen web arayüzünün linki: https://akilli-ogrenci-asistani-ft.streamlit.app/
 
