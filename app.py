@@ -127,7 +127,7 @@ class OgrenmeAnalitigi:
         
         try:
             genai.configure(api_key=api_anahtari)
-            model = genai.GenerativeModel('gemini-2.5-pro')
+            model = genai.GenerativeModel('gemini-2.5-flash')
             
             prompt = f"""
             Sen bir kişisel öğrenme koçusun. Aşağıdaki öğrenci çalışma verilerini analiz et ve 
@@ -396,7 +396,7 @@ class PDFIsleyici:
             return "Lütfen önce API anahtarınızı giriniz."
         try:
             genai.configure(api_key=api_anahtari)
-            model = genai.GenerativeModel('gemini-2.5-pro')
+            model = genai.GenerativeModel('gemini-2.5-flash')
 
             
             
@@ -435,7 +435,7 @@ class PDFIsleyici:
             return "Lütfen önce API anahtarınızı giriniz."
         try:
             genai.configure(api_key=api_anahtari)
-            model = genai.GenerativeModel('gemini-2.5-pro')
+            model = genai.GenerativeModel('gemini-2.5-flash')
 
             
             pdf_bytes = pdf_dosyasi.read()
@@ -534,7 +534,7 @@ class WebAnaliz:
             
             # Analiz
             genai.configure(api_key=api_anahtari)
-            model = genai.GenerativeModel('gemini-2.5-pro')
+            model = genai.GenerativeModel('gemini-2.5-flash')
             
             analiz_prompt = f"""
             Aşağıdaki web sitesi içeriğini analiz et ve Türkçe olarak özetle:
@@ -573,7 +573,7 @@ class WebAnaliz:
         
         try:
             genai.configure(api_key=api_anahtari)
-            model = genai.GenerativeModel('gemini-2.5-pro')
+            model = genai.GenerativeModel('gemini-2.5-flash')
             
             
             tam_icerik = web_verisi.get('tam_icerik', web_verisi.get('icerik', ''))
@@ -708,7 +708,7 @@ class RAGIsleyici:
 
         Cevap:
         """
-        model = ChatGoogleGenerativeAI(model="gemini-2.5-pro", temperature=0.3, google_api_key=self.api_anahtari)
+        model = ChatGoogleGenerativeAI(model="gemini-2.5-flash", temperature=0.3, google_api_key=self.api_anahtari)
         prompt = PromptTemplate(template=prompt_template, input_variables=["context", "question"])
         
         # "stuff" metoduna geri döndük (Dakikada 2 talep limitini aşmamak için)
@@ -786,7 +786,7 @@ class AkilliOgrenciAsistani:
             return "Lütfen önce API anahtarınızı giriniz."
         try:
             genai.configure(api_key=self.api_anahtari)
-            model = genai.GenerativeModel('gemini-2.5-pro')
+            model = genai.GenerativeModel('gemini-2.5-flash')
             context = "\n".join([f"Kullanıcı: {chat['mesaj']}\nAsistan: {chat['cevap']}" for chat in self.chat_gecmisi[-5:]])
             prompt = f"Sen bir akıllı öğrenci asistanısın. Samimi, arkadaşça, eğlenceli, komik ve motive edici bir dil kullan.\n{context}\nKullanıcı: {mesaj}\nAsistan:"
             response = model.generate_content(prompt)
