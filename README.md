@@ -42,7 +42,7 @@ Ayrıca, Hugging Face üzerinde barındırılan özel embedding modeli sayesinde
 
 *Yapay Zeka (AI):Google Gemini 2.5 Flash, LangChain*
 
-*RAG: FAISS (Vektör Veritabanı), HuggingFace Instruct Embeddings (`Fuurkan/chatbot-instructor-model`)*
+*RAG: FAISS (Vektör Veritabanı), HuggingFace Embeddings (`sentence-transformers/all-MiniLM-L6-v2`)*
 
 *Veri İşleme: PyPDF2 (PDF), BeautifulSoup (Web)*
 
@@ -62,8 +62,8 @@ Bu akış, RAG sekmesi ilk açıldığında `initialize\_vector\_store` fonksiyo
 
 2. Parçalama (Chunking): Bu büyük metin bloğu, `LangChain`'in `RecursiveCharacterTextSplitter`'ı ile daha küçük, yönetilebilir parçalara (chunk) ayrılır (Örn: 1000 karakterlik, 200 karakter örtüşmeli parçalar).
 
-3. Vektör Dönüşümü (Embedding): Bu aşamada `HuggingFaceInstructEmbeddings(model\_name="Fuurkan/chatbot-instructor-model")` fonksiyonu çağrılır.
-Eğer model (`Fuurkan/chatbot-instructor-model`) bilgisayarda mevcut değilse, `langchain` kütüphanesi modeli `Hugging Face Hub'dan` otomatik olarak indirir. (Bu ilk çalıştırmada internet bağlantısı gerektirir ve biraz zaman alabilir).
+3. Vektör Dönüşümü (Embedding): Bu aşamada `HuggingFace Embeddings (sentence-transformers/all-MiniLM-L6-v2)` fonksiyonu çağrılır.
+Eğer model (`sentence-transformers/all-MiniLM-L6-v2`) bilgisayarda mevcut değilse, `langchain` kütüphanesi modeli `Hugging Face Hub'dan` otomatik olarak indirir. (Bu ilk çalıştırmada internet bağlantısı gerektirir ve biraz zaman alabilir).
 
 4. İndirilen model, her bir metin parçasını (chunk) sayısal bir vektöre dönüştürür.
 
@@ -96,7 +96,7 @@ Kullanıcı RAG sekmesinden bir soru sorduğunda, aşağıdaki akış gerçekle�
  
 *Google Gemini 2.5 Flash erişimi olan bir Google API Anahtarı.*
 
-*Aktif İnternet Bağlantısı: RAG modülünün ilk çalıştırılmasında Hugging Face'den embedding modelini (yaklaşık 1.3 GB) otomatik olarak indirmek için gereklidir.*
+*Aktif İnternet Bağlantısı: RAG modülünün ilk çalıştırılmasında Hugging Face'den embedding modelini (yaklaşık 500 mb ) otomatik olarak indirmek için gereklidir.*
 
 
 
