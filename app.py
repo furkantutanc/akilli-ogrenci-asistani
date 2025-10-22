@@ -721,8 +721,8 @@ class RAGIsleyici:
 
         vector_store = st.session_state.rag_vector_store
         
-        # Kullanıcının sorusuna en benzer doküman parçalarını veritabanından bul
-        docs = vector_store.similarity_search(user_question)
+        # Kullanıcının sorusuna en benzer doküman parçalarını veritabanından bulmak
+        docs = vector_store.similarity_search(user_question, k=2)
         
         chain = self._get_conversational_chain()
         response = chain({"input_documents": docs, "question": user_question}, return_only_outputs=True)
