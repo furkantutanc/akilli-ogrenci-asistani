@@ -698,41 +698,41 @@ class RAGIsleyici:
 
 
     def _get_conversational_chain(self):
-    	"""Soru-cevap zincirini (QA Chain) oluşturur."""
+        """Soru-cevap zincirini (QA Chain) oluşturur."""
 
-    	# 1. MAP (HARİTALAMA) PROMPT'U
-    	# (Her bir belge parçasına ayrı ayrı uygulanır)
-    	map_prompt_template = """
-    	Aşağıdaki metin parçasını analiz et ve şu soruya cevap verebilecek kısımları özetle:
-    	SORU: {question}
-   	 METİN: {context}
+        # 1. MAP (HARİTALAMA) PROMPT'U
+        # (Her bir belge parçasına ayrı ayrı uygulanır)
+        map_prompt_template = """
+        Aşağıdaki metin parçasını analiz et ve şu soruya cevap verebilecek kısımları özetle:
+        SORU: {question}
+        METİN: {context}
 
-   	Sadece soruyla ilgili TÜRKÇE özeti ver:
-    	"""
-   	map_prompt = PromptTemplate(template=map_prompt_template, input_variables=["context", "question"])
+       Sadece soruyla ilgili TÜRKÇE özeti ver:
+        """
+       map_prompt = PromptTemplate(template=map_prompt_template, input_variables=["context", "question"])
 
-    	# 2. REDUCE (BİRLEŞTİRME) PROMPT'U
-    	# (Tüm özetler toplanır ve bu prompt ile tek bir cevap oluşturulur)
-    	combine_prompt_template = """
-    	Aşağıdaki metin özetlerini kullanarak şu soruyu kapsamlı bir şekilde TÜRKÇE yanıtla:
-    	SORU: {question}
-    	ÖZETLER: {context}
-	
-    	Kapsamlı Cevap:
-    	"""
-    	combine_prompt = PromptTemplate(template=combine_prompt_template, input_variables=["context", "question"])
+        # 2. REDUCE (BİRLEŞTİRME) PROMPT'U
+        # (Tüm özetler toplanır ve bu prompt ile tek bir cevap oluşturulur)
+        combine_prompt_template = """
+        Aşağıdaki metin özetlerini kullanarak şu soruyu kapsamlı bir şekilde TÜRKÇE yanıtla:
+        SORU: {question}
+        ÖZETLER: {context}
+    
+        Kapsamlı Cevap:
+        """
+        combine_prompt = PromptTemplate(template=combine_prompt_template, input_variables=["context", "question"])
 
-    	# MODEL TANIMLAMASI
-    	model = ChatGoogleGenerativeAI(model="gemini-2.5-pro", temperature=0.3, google_api_key=self.api_anahtari)
+        # MODEL TANIMLAMASI
+        model = ChatGoogleGenerativeAI(model="gemini-2.5-pro", temperature=0.3, google_api_key=self.api_anahtari)
 
-    	# ZİNCİRİ DOĞRU PARAMETRELERLE YÜKLE
-    	chain = load_qa_chain(
-        	model, 
-        	chain_type="map_reduce", 
-        	question_prompt=map_prompt,     # Bu, "map" adımı için kullanılır
-        	combine_prompt=combine_prompt   # Bu, "reduce" adımı için kullanılır
-    	)
-    	return chain
+        # ZİNCİRİ DOĞRU PARAMETRELERLE YÜKLE
+        chain = load_qa_chain(
+            model, 
+            chain_type="map_reduce", 
+            question_prompt=map_prompt,     # Bu, "map" adımı için kullanılır
+            combine_prompt=combine_prompt   # Bu, "reduce" adımı için kullanılır
+        )
+        return chain
 
     def user_input(self, user_question):
         """Kullanıcının sorusunu alır ve RAG pipeline'ını çalıştırır."""
