@@ -711,7 +711,7 @@ class RAGIsleyici:
         model = ChatGoogleGenerativeAI(model="gemini-2.5-pro", temperature=0.3, google_api_key=self.api_anahtari)
         prompt = PromptTemplate(template=prompt_template, input_variables=["context", "question"])
         
-        # Orijinal "stuff" metoduna geri döndük (ResourceExhausted hatasını önlemek için k=2 kullanacağız)
+        # "stuff" metoduna geri döndük (Dakikada 2 talep limitini aşmamak için)
         chain = load_qa_chain(model, chain_type="stuff", prompt=prompt)
         
         return chain
@@ -724,8 +724,8 @@ class RAGIsleyici:
 
         vector_store = st.session_state.rag_vector_store
         
-        # ResourceExhausted hatasını çözmek için k=2 olarak ayarladık
-        docs = vector_store.similarity_search(user_question, k=2)
+        # Veri boyutu (token) limitini aşmamak için k=1 olarak ayarladık
+        docs = vector_store.similarity_search(user_question, k=1)
         
         chain = self._get_conversational_chain()
         response = chain({"input_documents": docs, "question": user_question}, return_only_outputs=True)
