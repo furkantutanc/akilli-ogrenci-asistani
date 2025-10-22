@@ -725,7 +725,7 @@ class RAGIsleyici:
         vector_store = st.session_state.rag_vector_store
         
         # Veri boyutu (token) limitini aşmamak için k=1 olarak ayarladık
-        docs = vector_store.similarity_search(user_question, k=1)
+        docs = vector_store.similarity_search(user_question, k=3)
         
         chain = self._get_conversational_chain()
         response = chain({"input_documents": docs, "question": user_question}, return_only_outputs=True)
