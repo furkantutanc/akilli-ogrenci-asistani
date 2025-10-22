@@ -7,6 +7,9 @@ Ayrıca, Hugging Face üzerinde barındırılan özel embedding modeli sayesinde
 
 #### Not: Lütfen uygulamayı başlattığınızda Hugging Face'den embedding modeli indirilirken ve pdf işlenirken başka bir işlem yapmayın. (Tavsiye edilir.)
  **Rag Chatbot menüsünde uygun soruları sormak için rag_pdfs klasöründeki PDF dosyasını inceleyiniz.**
+###### Örneğin; Üniversite öğrencilerinin zaman yönetimi davranışları ve bu davranışların akademik başarı ile ilişkisi nedir ? 
+ 
+
 
 
 ## Temel Özellikler
