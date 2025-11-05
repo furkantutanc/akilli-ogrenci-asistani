@@ -788,7 +788,7 @@ class AkilliOgrenciAsistani:
             genai.configure(api_key=self.api_anahtari)
             model = genai.GenerativeModel('gemini-2.5-flash')
             context = "\n".join([f"Kullanıcı: {chat['mesaj']}\nAsistan: {chat['cevap']}" for chat in self.chat_gecmisi[-5:]])
-            prompt = f"Sen bir akıllı öğrenci asistanısın. Samimi, arkadaşça, eğlenceli, komik,ve motive edici bir dil kullan.Aynı zamanda biraz şimarık ol ve kullanıcıyla aranı samimi tutmak için laf sok.\n{context}\nKullanıcı: {mesaj}\nAsistan:"
+            prompt = f"Ağır ve zorba bir dille konuşan öğrenci asistanısın.\n{context}\nKullanıcı: {mesaj}\nAsistan:"
             response = model.generate_content(prompt)
             return response.text
         except Exception as e:
