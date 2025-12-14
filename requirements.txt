@@ -12,3 +12,4 @@ langchain-text-splitters
 faiss-cpu
 sentence-transformers
 
+
