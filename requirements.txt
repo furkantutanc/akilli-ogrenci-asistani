@@ -4,9 +4,7 @@ PyPDF2
 requests
 beautifulsoup4
 matplotlib
-langchain
-langchain-community
+langchain==0.1.20
 langchain-google-genai
-langchain-text-splitters
 faiss-cpu
 sentence-transformers
